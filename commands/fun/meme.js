@@ -1,28 +1,19 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
 const fetch = require("node-fetch");
+const random = require("something-random-on-discord").Random
 
 module.exports = {
   name: "meme",
-  aliases: [],
+  aliases: ["memes"],
   description: "Send A Meme!",
   usage: "Meme",
+  category: "fun",
   run: async (client, message, args) => {
     //Start
     message.delete();
-    fetch("https://meme-api.herokuapp.com/gimme")
-      .then(res => res.json())
-      .then(json => {
-        let embed = new MessageEmbed()
-          .setColor(Color)
-          .setTitle(`${json.title}`)
-          .setURL(json.postLink)
-          .setImage(json.url)
-          .setFooter(`From /r/${json.subreddit}`);
-
-        message.channel.send(embed);
-      });
+    let data = await random.getMeme()
+    message.channel.send(data)
 
     //End
   }

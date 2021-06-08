@@ -1,46 +1,43 @@
-const Discord = require("discord.js");
-const weather = require("weather-js");
-const { MessageEmbed } = require("discord.js");
-const { Color } = require("../../config.js");
+const weather = require('weather-js');
+const discord = require('discord.js')
 
+
+
+
+//TIME TO END STREAM
 module.exports = {
   name: "weather",
-  aliases: [],
-  description: "Show Given Location Weather Information!",
-  usage: "Weather <Location>",
-  run: async (client, message, args) => {
-    //Start
-    message.delete();
-
-    if (!args[0]) return message.channel.send("Please Give Location!");
-
-    weather.find({ search: args.join(" ") }, function(error, result) {
-      if (error) return message.channel.send(`Something Went Wrong, Try Again Later!`);
-
-      if (result === undefined || result.length === 0)
-        return message.channel.send(
-          `Invalid Location, Please Give Valid Location!`
-        );
-
-      var current = result[0].current;
-      var location = result[0].location;
-
-      const Weather = new Discord.MessageEmbed()
-        .setColor(Color)
-        .setTitle(`${location.name} Weather!`)
-        .setDescription(`${current.skytext}`)
-        .setThumbnail(current.imageUrl)
-        .addField("Degree Type", location.degreetype, true)
-        .addField("Temperature", `${current.temperature}°`, true)
-        .addField("Humidity", `${current.humidity}%`, true)
-        .addField("Wind", current.winddisplay, true)
-        .addField("Feels Like", `${current.feelslike}°`, true)
-        .addField("Timezone", `UTC${location.timezone}`, true)
-        .setTimestamp();
-
-      message.channel.send(Weather);
-    });
-
-    //End
+  aliases: [''],
+  description: "Get the weather of anywhere",
+  category: "info",
+  usage: "weathet <>",
+  run: (client, message, args) => {
+    
+    
+    if(!args.length) {
+      return message.channel.send("Please give the weather location")
+    }
+    
+ weather.find({search: args.join(" "), degreeType: 'C'}, function(err, result) {
+try {
+ 
+let embed = new discord.MessageEmbed()
+.setTitle(`Weather - ${result[0].location.name}`)
+.setColor("#ff2050")
+.setDescription("Temperature units can may be differ some time")
+.addField("Temperature", `${result[0].current.temperature} Celcius`, true)
+.addField("Sky Text", result[0].current.skytext, true)
+.addField("Humidity", result[0].current.humidity, true)
+.addField("Wind Speed", result[0].current.windspeed, true)//What about image
+.addField("Observation Time", result[0].current.observationtime, true)
+.addField("Wind Display", result[0].current.winddisplay, true)
+.setThumbnail(result[0].current.imageUrl);
+   message.channel.send(embed)
+} catch(err) {
+  return message.channel.send("Unable To Get the data of Given location")
+}
+});   
+    //LETS CHECK OUT PKG
+    
   }
-};
+}

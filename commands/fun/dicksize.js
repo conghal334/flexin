@@ -5,7 +5,7 @@ const { Color } = require("../../config.js");
 module.exports = {
   name: "dicksize",
   aliases: ["dick", "pp", "ppsize"],
-  description: "Show Member PP Size!",
+  description: "Hiển thị cỡ cu Member!",
   usage: "Dicksize <Mention Member>",
   run: async (client, message, args) => {
     //Start
@@ -41,7 +41,7 @@ module.exports = {
     let embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Pp v2 Machine`)
-      .setDescription(`${Member.user.username} pp Size Is\n${Result}`)
+      .setDescription(`${Member.user.username}  Có Size trym Là\n${Result}`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 

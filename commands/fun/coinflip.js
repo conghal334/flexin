@@ -5,20 +5,20 @@ const { Color } = require("../../config.js");
 module.exports = {
   name: "coinflip",
   aliases: ["toss", "flip"],
-  description: "Flip A Coin!",
+  description: "Lật xu!",
   usage: "Coinflip",
   run: async (client, message, args) => {
     //Start
     message.delete();
-    const coins = ["Heads", "Tails", "Center"];
+    const coins = ["Mặt Trên", "Mặt Dưới", "Hòa"];
 
     let result = Math.floor(Math.random() * coins.length);
 
     const embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`Coin Is`)
+      .setTitle(`Mặt xu là`)
       .setDescription(coins[result])
-      .setFooter(`Fliped by ${message.author.username}`)
+      .setFooter(`Được lật bởi ${message.author.username}`)
       .setTimestamp();
 
     message.channel.send(embed);

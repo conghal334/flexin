@@ -12,35 +12,35 @@ module.exports = {
     message.delete();
     if (!message.member.hasPermission("MANAGE_MESSAGES"))
       return message.channel.send(
-        "You Don't Have Permission To Use This Command!"
+        "Bạn Ko Có QUyền!"
       );
 
     if (!args[0])
-      return message.channel.send(`Please Give Me Amounts Of Messages!`);
+      return message.channel.send(`Hãy Đưa Ra Con Số!`);
 
     if (isNaN(args[0]))
-      return message.channel.send(`Please Give Me Number Value!`);
+      return message.channel.send(`Hãy đưau ra một giá trị!`);
 
-    if (args[0] < 4)
+    if (args[0] < 2)
       return message.channel.send(
-        `You Can Delete ${args[0]} By Your Self Its Not Too Many Messages!`
+        `You Có Thể Xóa ${args[0]} Bởi Your Self Nó Không Quá Nhiều Tin Nhắn!`
       );
 
     if (args[0] > 100)
       return message.channel.send(
-        `I Can't Delete ${args[0]} Because Of Discord Limit!`
+        `Tôi Không Thể ${args[0]} Vì Giới Hạn Của Discord!`
       );
 
-    let Reason = args.slice(1).join(" ") || "No Reason Provided!";
+    let Reason = args.slice(1).join(" ") || "Không Có Lí Do!";
 
     message.channel.bulkDelete(args[0]).then(Message => {
       let embed = new Discord.MessageEmbed()
         .setColor(Color)
-        .setTitle(`Messages Deleted!`)
+        .setTitle(`Đã xóa!`)
         .addField(`Moderator`, `${message.author.tag} (${message.author.id}`)
-        .addField(`Channel`, `${message.channel.name} (${message.channel.id}`)
-        .addField(`Deleted Messages`, `${Message.size}`)
-        .addField(`Reason`, `${Reason}`)
+        .addField(`Kênh`, `${message.channel.name} (${message.channel.id}`)
+        .addField(`Tin Nhắn Xóa`, `${Message.size}`)
+        .addField(`Lí Do`, `${Reason}`)
         .setFooter(`Requested by ${message.author.username}`)
         .setTimestamp();
       return message.channel

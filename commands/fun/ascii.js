@@ -7,7 +7,7 @@ const figletAsync = promisify(figlet);
 
 module.exports = {
   name: "ascii",
-  aliases: [],
+  aliases: ["asc"],
   description: "Ascii Art!",
   usage: "Ascii <Text>",
   run: async (client, message, args) => {
@@ -17,7 +17,7 @@ module.exports = {
     
     let Content = args.join(" ");
 
-    if (!Content) return message.channel.send(`Please Give Me Text!`);
+    if (!Content) return message.channel.send(`Hãy Viết Cái Gì Đó!`);
 
     let Result = await figletAsync(Content);
 
@@ -27,7 +27,7 @@ module.exports = {
       .setTimestamp();
 
     if (Content.length > 20)
-      return message.channel.send(`Please Make Shorter! | Limit : 20`);
+      return message.channel.send(`Hãy làm ngắn hơn! | Giới Hạn : 20`);
 
     message.channel.send(embed);
 

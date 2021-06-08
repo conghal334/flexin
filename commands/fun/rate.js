@@ -4,21 +4,22 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "rate",
-  aliases: [],
-  description: "Bot Rate Your Given Thing!",
+  aliases: ["rateme"],
+  description: "Bot sẽ đánh giá thứ gì đó của Bạn!",
   usage: "Rate <Text>",
+  category: "fun",
   run: async (client, message, args) => {
     //Start
     message.delete();
     let Content = args.join(" ");
 
     if (!Content)
-      return message.channel.send(`Please Give Me Something To Rate!`);
+      return message.channel.send(`Hãy đưa tôi thứ gì đó để đánh giá!`);
 
     let embed = new Discord.MessageEmbed()
       .setColor(Color)
-      .setTitle(`I Rate`)
-      .setDescription(`${Math.floor(Math.random() * 11)}/10 To ${Content}`)
+      .setTitle(`Tôi đánh giá`)
+      .setDescription(`${Math.floor(Math.random() * 11)}/10 Cho ${Content}`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 

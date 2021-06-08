@@ -4,7 +4,7 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "unban",
-  aliases: [],
+  aliases: ['boban'],
   description: "Unban A Member!",
   usage: "Unban <Member ID>",
   run: async (client, message, args) => {
@@ -12,24 +12,24 @@ module.exports = {
     message.delete();
     if (!message.member.hasPermission("BAN_MEMBERS"))
       return message.channel.send(
-        `You Don't Have Permission To Use This Command!`
+        `Bạn không có quyền để thực hiện!`
       );
 
     if (!args[0])
       return message.channel.send(
-        `Please Give Me Member ID That You Want To Unban!`
+        `Hãy Đưa ID Để Unban!`
       );
 
-    if (isNaN(args[0])) return message.channel.send(`Please Give Me Valid ID!`);
+    if (isNaN(args[0])) return message.channel.send(`Please Give Me Một Valid ID!`);
 
     if (args[0] === message.author.id)
-      return message.channel.send(`You Are Already Unban!`);
+      return message.channel.send(`Bạn Đã Được Unban!`);
 
     if (args[0] === message.guild.owner.user.id)
-      return message.channel.send(`Server Owner Is Already Unban!`);
+      return message.channel.send(`Server Owner Được Unban!`);
 
     if (args[0] === client.user.id)
-      return message.channel.send(`I Am Already Unban!`);
+      return message.channel.send(`Đang Unban Unban!`);
 
     let FetchBan = await message.guild.fetchBans();
 
@@ -45,25 +45,25 @@ module.exports = {
 
     if (!Member)
       return message.channel.send(
-        "Please Give Valid Member ID Or Member Is Not Banned!"
+        "ID Này Chưa Từng Bị Ban!"
       );
 
-    let Reason = args.slice(1).join(" ") || "No Reason Provided!";
+    let Reason = args.slice(1).join(" ") || "Không Có Lí Do!";
 
     try {
       message.guild.members.unban(Member.user.id, Reason);
     } catch (error) {
       return message.channel.send(
-        `I Can't Unban That Member Maybe Member Is Not Banned Or Some Error!`
+        `Tôi Không Thể Ban, Có Thể Có Lỗi Code!`
       );
     }
 
     let embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`Member Unbanned!`)
+      .setTitle(`Đã Unban Member!`)
       .addField(`Moderator`, `${message.author.tag} (${message.author.id}}`)
-      .addField(`Unbanned Member`, `${Member.user.tag} (${Member.user.id}`)
-      .addField(`Reason`, `${Reason || "No Reason Provided!"}`)
+      .addField(`Đã Unaban`, `${Member.user.tag} (${Member.user.id}`)
+      .addField(`Reason`, `${Reason || "Không Có Lí Do!"}`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 

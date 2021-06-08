@@ -6,7 +6,7 @@ module.exports = {
   name: "randomnumber",
   aliases: ["rn"],
   category: "fun",
-  description: "Get Random Number!",
+  description: "Nhận Random Number!",
   usage: "Randomnumber",
   run: async (client, message, args) => {
     //Start
@@ -15,7 +15,7 @@ module.exports = {
 
     const embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`Random Number Is`)
+      .setTitle(`Số Đó Là`)
       .setDescription([result])
       .setFooter(`1 - 100`)
       .setTimestamp();

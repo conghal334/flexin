@@ -4,8 +4,8 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "howgay",
-  aliases: [],
-  description: "Show How Gay Member Is!",
+  aliases: ["hg"],
+  description: "Độ gay member!",
   usage: "Howgay <Mention Member>",
   run: async (client, message, args) => {
     //Start
@@ -20,7 +20,7 @@ module.exports = {
     let embed = new MessageEmbed()
       .setColor(Color)
       .setTitle(`Gay v2 Machine`)
-      .setDescription(`${Member.user.username} Is ${Result}% Gay 🏳️‍🌈`)
+      .setDescription(`${Member.user.username} Có ${Result}% Gay 🏳️‍🌈`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 

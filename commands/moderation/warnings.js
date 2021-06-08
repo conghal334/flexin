@@ -4,8 +4,8 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "warnings",
-  aliases: ["warning"],
-  description: "Show User Warnings!",
+  aliases: ['cc'],
+  description: "Hiển Thị Warings!",
   usage: "Warnings <Mention User>",
   run: async (client, message, args) => {
     //Start
@@ -15,7 +15,7 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
 
-    if (!Member) return message.channel.send(`Please Mention A User!`);
+    if (!Member) return message.channel.send(`Hãy Đưa Ra Một Mention!`);
 
     let Warnings = client.db.get(
       `Warnings_${message.guild.id}_${Member.user.id}`
@@ -23,8 +23,8 @@ module.exports = {
 
     let embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`Member Warnings!`)
-      .setDescription(`${Member.user.username} Has ${Warnings || "0"} Warnings!`)
+      .setTitle(`Số Lần Bị Warn!`)
+      .setDescription(`${Member.user.username} Có ${Warnings || "0"} Đã Warn!`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
 
