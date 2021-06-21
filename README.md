@@ -120,7 +120,7 @@ node server.js
 * GAMES
 * ECONOMY
 
-<!-- Hỗ Trợ -->
+<!-- contributing -->
 ## Hỗ Trợ
 
 Bất kỳ đóng góp nào bạn thực hiện đều là **đánh giá rất cao**.
@@ -133,7 +133,7 @@ Bất kỳ đóng góp nào bạn thực hiện đều là **đánh giá rất c
 
 
 
-<!-- GIẤY PHÉP -->
+<!-- license -->
 ## License
 
 Được phân phối theo Giấy phép MIT. Xem `LICENSE` để biết thêm(chắc đã xóa rồi)
@@ -141,7 +141,7 @@ Bất kỳ đóng góp nào bạn thực hiện đều là **đánh giá rất c
 
 
 
-<!-- Liên Hệ -->
+<!-- #contact -->
 ## Liên Hệ
 [![Support Server](https://img.shields.io/discord/834390097621286922.svg?label=Discord&logo=Discord&colorB=7289da&style=for-the-badge)](https://discord.gg/cFk7VsfkZS) 
 
