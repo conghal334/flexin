@@ -32,10 +32,10 @@
         <li><a href="#installation">Cài Đặt</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Sử Dụng</a></li>
-    <li><a href="#contributing">Hỗ Trợ</a></li>
+    <li><a href="#sử dụng">Sử Dụng</a></li>
+    <li><a href="#hỗ trợ">Hỗ Trợ</a></li>
     <li><a href="#license">Giấy Phép</a></li>
-    <li><a href="#contact">Liên Hệ</a></li>
+    <li><a href="#liên hệ">Liên Hệ</a></li>
     
   </ol>
 </details>
@@ -92,7 +92,7 @@ exports.Pruning = false;
 exports.Mongo = `Mongo_db URL`;
 exports.admins = [""];
 exports.countChannel = "";
-   ```
+  
 
 <!-- Ví Dụ -->
 ## Sử Dụng
