@@ -132,7 +132,7 @@ Bất kỳ đóng góp nào bạn thực hiện đều là **đánh giá rất c
 <!-- contact -->
 ## Liên Hệ
 > Tham gia Server để nhận hỗ trợ
-[![Support Server](https://img.shields.io/discord/834390097621286922.svg?label=Discord&logo=Discord&colorB=7289da&style=for-the-badge)](https://discord.gg/cFk7VsfkZS) 
+<br> [![Support Server](https://img.shields.io/discord/834390097621286922.svg?label=Discord&logo=Discord&colorB=7289da&style=for-the-badge)](https://discord.gg/cFk7VsfkZS)
 
 
 
