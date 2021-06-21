@@ -64,7 +64,7 @@ Mời bot mới của mình nè! [Here](https://dsc.gg/avena)!!
 
 1. Tạo Bot App trên Discord[Discord Developer Portal](https://discord.com/developers/applications) và lấy token!
 
-2. Tạo một [MongoDB](https://www.mongodb.com/cloud/atlas/lp/try2-in?utm_source=google&utm_campaign=gs_apac_india_search_core_brand_atlas_desktop&utm_term=mongodb%20web%20service&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624347&gclid=CjwKCAjw47eFBhA9EiwAy8kzNIxUxDVBfCKUmjLMNJ9JiWgkFauXv9LtC0cFG-qrmM-Vg5Y4RUG7IBoCHyUQAvD_BwE) Database and get its Connection Link. Checkout This Tutorial To know how to use MongoDB [Tutorial](https://youtu.be/8no3SktqagY)
+2. Tạo một [MongoDB](https://www.mongodb.com/cloud/atlas/lp/try2-in?utm_source=google&utm_campaign=gs_apac_india_search_core_brand_atlas_desktop&utm_term=mongodb%20web%20service&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624347&gclid=CjwKCAjw47eFBhA9EiwAy8kzNIxUxDVBfCKUmjLMNJ9JiWgkFauXv9LtC0cFG-qrmM-Vg5Y4RUG7IBoCHyUQAvD_BwE) Databasea và Kết Nối
 
 2. API keys:
 * [Snowflake Api](https://api.snowflakedev.xyz/ )
