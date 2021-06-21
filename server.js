@@ -26,7 +26,7 @@ const translate = require('@iamtraction/google-translate');
 const { Prefix, Token, Color, Locale } = require("./config.js");
 const { Database } = require('quickmongo');
 const Afk = require('./database/models/afkSchema.js');
-const mongoDBURL = 'mongodb://conghal:Thuongvu1@flexinbot-shard-00-00.cesni.mongodb.net:27017,flexinbot-shard-00-01.cesni.mongodb.net:27017,flexinbot-shard-00-02.cesni.mongodb.net:27017/Flexinbot?replicaSet=atlas-fat2xt-shard-0&ssl=true&authSource=admin';
+const mongoDBURL = 'Mongo_db url';
 mongoose.connect(mongoDBURL, {
   useUnifiedTopology: true,
   useNewUrlParser: true
@@ -46,7 +46,7 @@ client.emotes = require('./config.json');
 client.on("ready", () => {
   console.log(`ready!`);
   client.user
-    .setActivity("Owner: Lyan Gay", { type: "PLAYING" })
+    .setActivity("Owner: rcong#9999", { type: "PLAYING" })
     .catch(error => console.log(error));
 
 });
