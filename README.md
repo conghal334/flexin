@@ -91,7 +91,7 @@ exports.Volume = 100;
 exports.Pruning = false;
 exports.Mongo = `Mongo_db URL`;
 exports.admins = [""];
-exports.countChannel = "";
+exports.countChannel = "";```
   
 
 <!-- Ví Dụ -->
