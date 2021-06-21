@@ -19,16 +19,16 @@
 
 <!-- Các content -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary>Các Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project">Liên quan đến Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Ngôn ngữ</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Bắt Đầu</a>
+      <a href="#getting-started">Khởi Đầu</a>
       <ul>
         <li><a href="#installation">Cài Đặt</a></li>
       </ul>
@@ -44,10 +44,11 @@
 
 
 <!-- VỀ DỰ ÁN NÀY-->
-## About The Project
+## Về Dự Án này
 
 Một Bot Discord đa năng với các lệnh Anime | Game | Hình Ảnh | Giải Trí | Tiện Ích và Quản Lí !
 All of the Commands and Activities You Need In One Bot! 
+Bot này mình làm hồi mới code, nhưng giờ thay đổi nên cái này mình share ra thôi = D
 
 ### Đã xây dựng bằng
 
@@ -55,7 +56,7 @@ All of the Commands and Activities You Need In One Bot!
 
 
 <!-- Bắt đầu -->
-## Getting Started
+## Khởi Đầu
 
 Mời bot mới của mình nè! [Here](https://dsc.gg/avena)!!
 
