@@ -80,19 +80,6 @@ Mời bot mới của mình nè! [Here](https://dsc.gg/avena)!!
    npm install
    ```
 5. Nhập Discord Bot Token, API Key và Mongo Data base url trong file config 
-   ```js
-exports.Prefix = `prefix`;//prefix của bot
-exports.Token = `BOT TOKEN`;//bto token
-exports.Color = `GREEN`;//màu của embed
-exports.Ytapi = `YOUTUBE API`;
-exports.Maxplaylistsize = 10;
-exports.Staytime = 60;
-exports.Volume = 100;
-exports.Pruning = false;
-exports.Mongo = `Mongo_db URL`;
-exports.admins = [""];
-exports.countChannel = "";
-```
   
 
 <!-- Ví Dụ -->
